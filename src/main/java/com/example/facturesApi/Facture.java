@@ -23,6 +23,7 @@ public class Facture {
     private int montant;
     private String email;
     private boolean suspendu;
+    private boolean paye;
 
 
 
@@ -38,7 +39,7 @@ public class Facture {
                    Date startPeriode,
                    Date endPeriode,
                    int montant,
-                   String email, boolean suspendu) {
+                   String email, boolean suspendu, boolean paye) {
         this.typeFacture = typeFacture;
         this.telFac = telFac;
         this.GSMFac = GSMFac;
@@ -50,6 +51,7 @@ public class Facture {
         this.montant = montant;
         this.email = email;
         this.suspendu = suspendu;
+        this.paye = paye;
     }
 
     public Long getIdFacture() {
@@ -146,6 +148,14 @@ public class Facture {
 
     public void setSuspendu(boolean suspendu) {
         this.suspendu = suspendu;
+    }
+
+    public boolean isPaye() {
+        return paye;
+    }
+
+    public void setPaye(boolean paye) {
+        this.paye = paye;
     }
 
     @Override
